@@ -1,0 +1,367 @@
+Exercise 1: Print
+Write a C++ program that prints the following messages
+You are 10 years old
+You are too young to play the game.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int age;
+    age = 10;
+    cout << " You are "<<age<<" years old.\n";
+    cout << " You are too young to play the game.\n";
+    system("PAUSE");
+    return 0;
+}
+
+Exercise 2: Arrows
+Write a C++ program to print the asterisk pattern shown below.
+     *
+    ***
+   *****
+  *******
+ *********
+    ***  
+    ***
+    ***
+
+Exercise 3: PI
+Create a program to calculate the circumference and area of a circle from the radius. The program should ask the user to enter the desired radius of the circle.
+PI is defined as: 3.14159 Area is defined as: PI * radius * radius Circumference is defined as: PI * Radius * 2.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  float radius, area_of_circle, circumference_of_circle;
+  float PI = 3.14159;
+
+  printf("Enter the Radius of Circle: ");
+  scanf("%f", & radius);
+
+  area_of_circle = PI * radius * radius;
+
+  printf("\n\narea of circle program in c is = %f ", area_of_circle);
+  circumference_of_circle = 2 * PI * radius;
+
+  printf("\n\nCircumference of Circle is = %f \n", circumference_of_circle);
+  
+  cin.get();
+  return (0);
+}
+
+
+Exercise 4: User Input / Output
+Write a C++ program to prompt the user to input her/his name, age and hometown and print these details on the screen. The format of text should look like the sample output below but you can only use a single cout when outputting the information.
+Your Name is: Alpha
+Your Age is: 22
+Your Hometown is: Ras Al Khaimah
+
+include <iostream>
+
+using namespace std;
+
+int main()
+{
+	string name, hometwon;
+    int age;
+    
+    name = "jerrold";
+    hometwon = "Cavite";
+    age = 19;
+    
+    cout << "Name " << name << "\nHometown: " << hometwon << "\nAge: " << age << endl;
+    
+    cin.get();
+    return 0;
+}
+
+
+
+Exercise 5: Number Input / Output
+Write a C++ program to prompt the user to input 3 integer values and print these values in forward and reversed order in a similar format to the below.
+Please enter your 3 numbers: 12 45 78
+
+Your numbers forward:
+12
+45
+78
+
+
+Your numbers reversed:
+78
+45
+12
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int val1;
+    int val2;
+    int val3;
+    cout<<"Please enter your 3 numbers:";
+    cin>>val1>>val2>>val3;
+ 
+    cout<<"\nYour numbers forward:\n";
+    cout<<val1<< "\n"<<val2<<"\n" <<val3<<"\n";
+    cout<< "Your numbers reversed:\n";
+    cout<<val3<<"\n"<<val2 <<"\n"<<val1<<"\n";
+   
+ system("PAUSE");
+    return EXIT_SUCCESS;
+}
+
+
+
+Exercise 6: Maths
+Write a C++ program to produce a table in the output as shown below. You should use the maths operators on the x and/or y variable to achieve the results. One math operator should be used for each line in the following order: Addition, Subtraction, Multiplication, Division, and Modulus.
+Exercise 7: More Maths
+Write a C++ program to produce a table in the output as shown below. You should use the maths operators on the x and/or y variable to achieve the results. One math operator should be used for each line in the following order: Addition, Subtraction, Multiplication, Division, and Modulus.
+Exercise 8: So Much Maths
+Write a program that evaluates the following calculations for two int numbers obtained from the user and outputs the results to the console:
+Sum (+) | Diff (-) | Product (x) | Quotient (/) | Remainder (%)
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int dividend, divisor, quotient, remainder;
+    printf("Enter dividend: ");
+    scanf("%d", &dividend);
+    printf("Enter divisor: ");
+    scanf("%d", &divisor);
+
+    // Computes quotient
+    quotient = dividend / divisor;
+
+    // Computes remainder
+    remainder = dividend % divisor;
+
+    printf("Quotient = %d\n", quotient);
+    printf("Remainder = %d", remainder);
+    return 0;
+}
+
+Exercise 9: Is it a Triangle?
+Write a program that checks if 3 angles given can make a triangle (the angles should add up to 180). The program should ask the user to enter values for 3 angles then output appropriate feedback.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int angle1, angle2, angle3, sum;
+
+    /* Input all three angles of triangle */
+    printf("Enter three angles of triangle: \n");
+    scanf("%d%d%d", &angle1, &angle2, &angle3);
+
+    /* Calculate sum of angles */
+    sum = angle1 + angle2 + angle3; 
+
+    /*
+     * If sum of angles is 180 and
+     * angle1, angle2, angle3 is not 0 then
+     * triangle is valid.
+     */
+    if(sum == 180 && angle1 > 0 && angle2 > 0 && angle3 > 0) 
+    {
+        printf("Triangle is valid.");
+    }
+    else
+    {
+        printf("Triangle is not valid.");
+    }
+
+    return 0;
+}
+
+
+Exercise 10: Is it even?
+Write a program that allows the user to input a number and checks whether the number is even or not using the Ternary operator.
+#include <iostream>
+
+using namespace std;
+	
+int main()
+{
+	int n;
+
+    cout << "Enter an integer: ";
+    cin >> n;
+
+    if ( n % 2 == 0)
+        cout << n << " is even.";
+    else
+        cout << n << " is odd.";
+
+    return 0;
+}
+
+Exercise 11: Is it a letter?
+Write a program to input a character and check whether the character is in the alphabet or not using the Ternary operator.
+Exercise 12: What’s the Max
+Write a program to input two numbers and out which is largest using the Ternary Operator.
+Exercise 13: Days of the Week
+Write a program that accepts a number (1-7) then using a switch statement outputs what day of the week it is (e.g. 1 = Monday).
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	char op;
+    float num1, num2;
+
+    cout << "Enter operator either + or - or * or /: ";
+    cin >> op;
+
+    cout << "Enter two operands: ";
+    cin >> num1 >> num2;
+
+    switch(op)
+    {
+        case '+':
+            cout << num1+num2;
+            break;
+
+        case '-':
+            cout << num1-num2;
+            break;
+
+        case '*':
+            cout << num1*num2;
+            break;
+
+        case '/':
+            cout << num1/num2;
+            break;
+
+        default:
+            // If the operator is other than +, -, * or /, error message is shown
+            cout << "Error! operator is not correct";
+            break;
+    }
+    
+    return 0;
+}
+
+Exercise1 4: Would You Like to Continue?
+Write a program that implements a while loop. This program should ask the user if they would like to continue and use the while loop to keep looping as long as they enter the letter Y. Once the while loop has terminated output the number of times it executed.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	 int number;
+    int sum = 0;
+
+    // take input from the user
+    cout << "Enter a number: ";
+    cin >> number;
+
+    while (number >= 0) {
+        // add all positive numbers
+        sum += number;
+
+        // take input again if the number is positive
+        cout << "Enter a number: ";
+        cin >> number;
+    }
+
+    // display the sum
+    cout << "\nThe sum is " << sum << endl;
+    
+    return 0;
+}
+
+
+Exercise 15: Fizz Buzz
+Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five prints “Buzz”. For numbers which are multiples of both three and five print “Fizz Buzz”.
+Exercise 16: Fix This While You’re Here
+Fix and improve this while loop code so the user can only enter valid data.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	char choice;
+    do { // do everything in the do block while...
+
+        cout <<"Do you want to end the loop now, enter Y or N ?"<< endl;
+
+        cin >> choice;
+
+        if (choice != 'Y' and choice != 'y' and choice != 'N' and choice != 'n') // if needed add input 
+            cout << choice << " is not a valid option. Try agian" << endl; // validation
+
+    } while (choice !='N' && choice !='n'); // the user input does not equal 'N'andr 'n'
+
+return 0;
+}
+
+Exercise 17: Case Switcher
+Write a program that swaps the upper and lower case letters in the sentence below:
+CoDeLaB iS gReAt. I lOvE c++
+Desired result:
+cOdElAb Is GrEaT. I LoVe C++
+
+Exercise 18: Simple Calculator
+Write a C++ program that will display the following calculator menu:
+1.	Add
+2.	Subtract
+3.	Multiply
+4.	Divide
+5.	Modulus
+The program will prompt the user to choose the operation choice (from 1 to 5). Then it asks the user to input values for the calculation. The program outputs the results of the calculation.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	char op;
+    float num1, num2;
+
+    cout << "Enter operator either + or - or * or /: ";
+    cin >> op;
+
+    cout << "Enter two operands: ";
+    cin >> num1 >> num2;
+
+    switch(op)
+    {
+        case '+':
+            cout << num1+num2;
+            break;
+
+        case '-':
+            cout << num1-num2;
+            break;
+
+        case '*':
+            cout << num1*num2;
+            break;
+
+        case '/':
+            cout << num1/num2;
+            break;
+
+        default:
+            // If the operator is other than +, -, * or /, error message is shown
+            cout << "Error! operator is not correct";
+            break;
+    }
+    
+    return 0;
+}
