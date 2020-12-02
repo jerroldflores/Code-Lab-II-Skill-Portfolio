@@ -1,0 +1,151 @@
+Exercise 1 – What Goes in Must Come Out
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    ofstream outFile;
+    outFile.open("bio.txt");
+    
+    if (outFile.is_open())
+    {
+        string input
+        cout << "Name: ";
+        getline(cin, input):
+        outFile << input << endl;
+        
+        cout << "Address: ";
+        getline(cin, input);
+        outFile << input << endl;
+        
+        cout << "Age: ";
+        cin >> input;
+        outFile << input << endl;
+        
+        outFile.close();
+    }
+    else {
+        cout  << "File is unavailable. Error" << endl;
+    }
+    
+    
+    ifstream files("bio.txt");
+    cout << "\nData File: " << endl;
+    if (files.eof()) {
+        while (!files.oef()) {
+            string data ;
+            getline(files,  data);
+            cout << data << endl;
+        }
+        files.close();
+    }
+    else {
+        cout  << "Error!" << endl;
+    }
+    
+    
+    
+    return 0;
+}
+
+Exercise 2 – Counting is Fun
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int numberOfLines = 0;
+    string Line;
+    
+    ifstream RandomStringsFile("randomStrings.txt");
+    
+    if (RandomStringsFile.is_open())
+    {
+        cout <<"---> READING  FILE <---\n\n";
+        while (getline(randomStringsFile, line))
+        {
+            numberOfLines++;
+        }
+        cout << "The total number of lines in the file is " << numberOfLines << "." << endl;
+        return 0;
+    }
+    else
+    {
+        cout << "---> !!! FILE CANNOT BE ACCESSED. TERMINATING PROGRAM... !!! <---" << endl;
+        return -1;
+    }
+    
+    randomStringsFile.close();
+}
+
+Exercise 3 – Read to an Array (A)
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    ifstream inSource;
+    inSource.open("numberA.txt");
+    
+    int vallist[100];
+    int z = 0;
+    int x;
+    
+    if (inSource.is_open())
+    {
+        while(!inSource.eof())
+        {
+            inSource >> vallist[z];
+            z++;
+            
+        }
+        inSource.close();
+    }
+    for (x = 0; x < 100; x++)
+    {
+        cout << "[] " << vallist[x] << "\n";
+    }
+    cout << "\n\n";
+    return 0;
+    
+}
+
+Exercise 4 – Read to an Array (B)
+
+Exercise 5 – Comparing String
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    ifstream sentFile("sentences.txt");
+    int counter = 0;
+    stirng sentence = "Hello my name is Jack Hobbs";
+    
+    if (sentFile.is_open())
+    {
+        while (!sentFile.eof())
+        {
+            string fileSentence;
+            getline(sentFile.eof())
+            if (fileSentence ==sentence)
+                counter++;
+        }
+        cout <<"The sentence \"Hello my name is Jake Hobbs appeared\" " << counter << "  times!" << endl;
+    }
+}
+
+Exercise 6 – The Petrol Pump
