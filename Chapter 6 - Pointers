@@ -1,0 +1,57 @@
+Exercise 1 – What the Point
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string genshin[7] = { "Amber", "Paimon", "Kaeya", "Lisa", "Venti", "Xianling","Barbara" };
+    string* ptrGenshin = genshin;
+    
+    ptrGenshin += 5;
+    cout << "You have chosen " << *ptrGenshin << "." << endl;
+    
+    ptrGenshin -= 3;
+    cout << "\nYou have moved back to " << *ptrGenshin << "." << endl;
+    
+    ptrGenshin += 2;
+    cout << "\nYou have moved foward to " << *ptrGenshin << "." << endl;
+    
+    string* ptrGenshinEnd = &genshin[7];
+    
+    ptrGenshin = genshin;
+    
+    cout <<"\nGenshin Impact Character:\n";
+    while (ptrGenshin != ptrGenshinEnd)
+    {
+        cout << "---> " << *ptrGenshin << endl;
+        ptrGenshin++;
+    }
+    
+    return 0;
+}
+
+Exercise 2 – Point to the Max
+
+Exercise 3 – Making Memories
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Memory address: " <<endl;
+    int* ptr = new int (100) ;
+    
+    cout<< ptr << endl;
+    cout<< "first allocated value: " <<endl;
+    cout<< *ptr<< endl;
+    
+    cout <<"Value change: "<<endl;
+    
+    *ptr = 1700;
+    cout<< *ptr<< endl;
+    
+    delete ptr;
